@@ -1,0 +1,139 @@
+/* App.css */
+
+/* Body and background */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #94b9d1; /* Dark gray background */
+  margin: 0;
+  padding: 0;
+  color: #f4f4f4; /* Light text for dark background */
+}
+
+/* Center main container */
+div {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #3b3b3b; /* Slightly lighter dark for container */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 2);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  font-size: 36px; /* bigger */
+  font-weight: 900; /* bold and strong */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #00f2ff); /* colorful gradient */
+ -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; /* gradient text */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* subtle shadow */
+  animation: gradientAnimation 3s ease infinite; /* gradient animation */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: #ff6ec4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5;
+}
+
+/* Input fields */
+input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #2e2e2e;
+  color: #f4f4f4;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  min-width: 100px; /* Same size for all buttons */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Add/Update button */
+button:nth-of-type(1) {
+  background-color: #457fec; /* Blue */
+  color: white;
+}
+
+button:nth-of-type(1):hover {
+  background-color: #457fec;
+}
+
+/* Edit button */
+button.edit-btn {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+button.edit-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Delete button */
+button.delete-btn {
+  background-color: #d32f2f !important;/* Red */
+  color: #d32f2f ;
+}
+
+button.delete-btn:hover {
+  background-color: #b71c1c !important;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #444;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: center;
+  padding: 12px;
+  color: #f4f4f4;
+  border-bottom: 1px solid #555;
+}
+
+th {
+  background-color: #457fec;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background-color: #555;
+}
